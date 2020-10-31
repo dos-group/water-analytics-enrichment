@@ -24,9 +24,11 @@ or use maven directly instead
 mvn clean compile package
 ```
 
+The target artifact will be created as `EnrichmentJob/target/EnrichmentJob-1.0-SNAPSHOT.jar`.
+
 ## Running
 
-Submit the job to flink. Use the `Parallelism` setting to configure the cluster size in accordance with the number of Flink taskmanagers and Kafka brokers. Other parameters that can be passed to the job are:
+Submit the compiled artifact to Flink. Use the `Parallelism` setting to configure the cluster size in accordance with the number of Flink taskmanagers and Kafka brokers. Other parameters that can be passed to the job are:
 
 - `--initialize` - initialize the Cassandra DB by creating the keyspace and parameter table
 - `--mqtt` - use RabbitMQ as data stream broker instead of Kafka
